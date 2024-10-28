@@ -17,10 +17,12 @@
       display: flex;
       justify-content: center; /* Center the content */
       padding: 20px; /* Padding around the body */
+      max-width: 1200px; /* Limit the max width of the content */
+      margin: 0 auto; /* Center the content */
     }
 
     .about-contact-box {
-      max-width: 300px; /* Fixed width for About and Contact box */
+      max-width: 350px; /* Slightly increased width for About and Contact box */
       margin-right: 20px; /* Space between the boxes */
       padding: 25px;
       background-color: white;
@@ -29,7 +31,7 @@
     }
 
     .projects-box {
-      max-width: 800px; /* Width for Projects box */
+      flex: 1; /* Allow this box to take up the remaining space */
       padding: 25px;
       background-color: white;
       border-radius: 15px;
@@ -54,6 +56,15 @@
 
     li {
       margin-bottom: 10px; /* Add spacing between items */
+      display: flex; /* Use flexbox for alignment */
+      align-items: center; /* Center items vertically */
+    }
+
+    .project-image {
+      width: 50px; /* Set a fixed width for project images */
+      height: 50px; /* Set a fixed height for project images */
+      margin-right: 10px; /* Space between image and text */
+      border-radius: 5px; /* Slightly rounded corners for images */
     }
 
     a {
@@ -81,6 +92,11 @@
         max-width: 100%; /* Full width on small screens */
         margin: 15px 0; /* Margin for spacing */
       }
+      
+      .project-image {
+        width: 30px; /* Smaller image size on mobile */
+        height: 30px; /* Smaller image size on mobile */
+      }
     }
   </style>
 </head>
@@ -100,8 +116,15 @@
   <div class="projects-box">
     <h2>Projects</h2>
     <ul>
-      <li><a href="https://l1l197-kendallh78.shinyapps.io/appshiny/" target="_blank">Project 1</a>: An R Shiny application examining the correlation between health factors and cardiovascular disease using a Kaggle dataset.</li>
-      <li><a href="https://github.com/your-username/project2" target="_blank">Project 2</a>: A computer vision app.</li>
+      <li>
+        <img class="project-image" src="path/to/image1.jpg" alt="Project 1 Image"> 
+        <a href="https://l1l197-kendallh78.shinyapps.io/appshiny/" target="_blank">Project 1</a>: An R Shiny application examining the correlation between health factors and cardiovascular disease using a Kaggle dataset.
+      </li>
+      <li>
+        <img class="project-image" src="path/to/image2.jpg" alt="Project 2 Image"> 
+        <a href="https://github.com/your-username/project2" target="_blank">Project 2</a>: A computer vision app.
+      </li>
+      <!-- Add more projects here -->
     </ul>
   </div>
 
