@@ -14,22 +14,22 @@
       font-family: 'Montserrat', sans-serif;
       background-color: #ffe6f2; /* Baby Pink Background */
       margin: 0;
-      padding: 0;
+      display: flex;
     }
 
-    header {
-      background-color: #ff99cc;
+    .sidebar {
+      background-color: #ff99cc; /* Pink Sidebar */
       color: white;
       padding: 25px;
-      text-align: center;
-      font-size: 2em;
-      font-weight: bold;
-      letter-spacing: 1px;
+      width: 250px; /* Fixed width for sidebar */
+      height: 100vh; /* Full height */
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
     }
 
-    section {
+    .content {
+      flex-grow: 1; /* Take the remaining space */
       max-width: 800px;
-      margin: 30px auto;
+      margin: 30px;
       padding: 25px;
       background-color: white;
       border-radius: 15px;
@@ -47,17 +47,8 @@
       text-align: center;
     }
 
-    ul {
-      list-style-type: none; /* Remove bullet points */
-      padding: 0; /* Remove default padding */
-    }
-
-    li {
-      margin-bottom: 10px; /* Add spacing between items */
-    }
-
     a {
-      color: #ff66b2;
+      color: #ff66b2; 
       text-decoration: none;
     }
 
@@ -77,7 +68,11 @@
 
     /* Responsive Design */
     @media (max-width: 600px) {
-      section {
+      .sidebar {
+        width: 100%; /* Full width on small screens */
+        height: auto; /* Auto height */
+      }
+      .content {
         margin: 15px;
         padding: 15px;
       }
@@ -89,39 +84,34 @@
 </head>
 <body>
 
-<header>
-  Here are some things I have done!
-</header>
+  <div class="sidebar">
+    <h1>Kendall H.</h1>
+    <h2>About Me</h2>
+    <p>Hello! I am a current student at Worcester Polytechnic Institute pursuing my Master's in Artificial Intelligence.</p>
+    
+    <h2>Contact</h2>
+    <p>Email: <a href="#" onclick="openEmail()">kendall.haddigan@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/kendallh78" target="_blank">https://github.com/kendallh78</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/kendall-h-3b828a31b/" target="_blank">https://www.linkedin.com/in/kendall-h-3b828a31b/</a></p>
+  </div>
 
-<section>
-  <h1>About Me</h1>
-  <p>Hello! I am a current student at Worcester Polytechnic Institute pursuing my Master's in Artificial Intelligence.</p>
+  <div class="content">
+    <h2>Projects</h2>
+    <ul>
+      <li><a href="https://l1l197-kendallh78.shinyapps.io/appshiny/" target="_blank">Project 1</a>: An R Shiny application examining the correlation between health factors and cardiovascular disease using a Kaggle dataset.</li>
+      <li><a href="https://github.com/your-username/project2" target="_blank">Project 2</a>: A computer vision app.</li>
+    </ul>
+  </div>
 
-  <h2>Projects</h2>
-  <ul>
-    <li><a href="https://l1l197-kendallh78.shinyapps.io/appshiny/" target="_blank">Project 1</a>: An R Shiny application examining the correlation between health factors and cardiovascular disease using a Kaggle dataset.</li>
-    <li><a href="https://github.com/your-username/project2" target="_blank">Project 2</a>: A computer vision app.</li>
-  </ul>
+  <footer>
+    <p>&copy; 2024 My Portfolio.</p>
+  </footer>
 
-<h2>Contact</h2>
-<p>
-  Email: <a href="#" onclick="openEmail()">kendall.haddigan@gmail.com</a>
-</p>
-<p>
-  GitHub: <a href="https://github.com/kendallh78" target="_blank">https://github.com/kendallh78</a>
-</p>
-
-<script>
-  function openEmail() {
-    window.open('mailto:kendall.haddigan@gmail.com', '_blank');
-  }
-</script>
-
-</section>
-
-<footer>
-  <p>&copy; 2024 My Portfolio.</p>
-</footer>
+  <script>
+    function openEmail() {
+      window.open('mailto:kendall.haddigan@gmail.com', '_blank');
+    }
+  </script>
 
 </body>
 </html>
