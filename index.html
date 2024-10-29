@@ -14,16 +14,21 @@
       font-family: 'Montserrat', sans-serif;
       background-color: #ffe6f2;
       margin: 0;
+      padding: 20px;
       display: flex;
       justify-content: center;
-      padding: 20px;
-      max-width: 1200px;
+      max-width: 1400px;
       margin: 0 auto;
     }
 
+    .container {
+      display: flex;
+      gap: 20px;
+      width: 100%;
+    }
+
     .about-contact-box {
-      max-width: 350px;
-      margin-right: 20px;
+      flex: 0 0 30%; /* 30% of the available width */
       padding: 25px;
       background-color: white;
       border-radius: 15px;
@@ -31,7 +36,7 @@
     }
 
     .projects-box {
-      flex: 1;
+      flex: 1; /* Take the remaining available space */
       padding: 25px;
       background-color: white;
       border-radius: 15px;
@@ -55,17 +60,17 @@
     }
 
     .project-item {
-      margin-bottom: 30px; /* Spacing between projects */
+      margin-bottom: 30px;
       text-align: center;
     }
 
     .project-item img {
-      max-width: 100%; 
+      max-width: 100%;
       height: auto;
-      max-height: 300px; /* Optional: Constrain max height for consistency */
+      max-height: 300px;
       margin-bottom: 10px;
       border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for images */
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     }
 
     .project-item a {
@@ -92,60 +97,65 @@
     }
 
     /* Responsive Design */
-    @media (max-width: 600px) {
+    @media (max-width: 800px) {
+      .container {
+        flex-direction: column;
+      }
       .about-contact-box, .projects-box {
-        max-width: 100%;
-        margin: 15px 0;
+        width: 100%;
+        margin-bottom: 15px;
       }
     }
   </style>
 </head>
 <body>
 
-  <div class="about-contact-box">
-    <h1>Kendall Haddigan</h1>
-    <h2>About Me</h2>
-    <p>Hello! I am a current student at Worcester Polytechnic Institute pursuing my Master's in Artificial Intelligence.</p>
-    
-    <h2>Contact</h2>
-    <p>Email: <a href="#" onclick="openEmail()">kendall.haddigan@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/kendallh78" target="_blank">https://github.com/kendallh78</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/kendall-h-3b828a31b/" target="_blank">https://www.linkedin.com/in/kendall-h-3b828a31b/</a></p>
-  </div>
+  <div class="container">
+    <div class="about-contact-box">
+      <h1>Kendall Haddigan</h1>
+      <h2>About Me</h2>
+      <p>Hello! I am a current student at Worcester Polytechnic Institute pursuing my Master's in Artificial Intelligence.</p>
+      
+      <h2>Contact</h2>
+      <p>Email: <a href="#" onclick="openEmail()">kendall.haddigan@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/kendallh78" target="_blank">https://github.com/kendallh78</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/kendall-h-3b828a31b/" target="_blank">https://www.linkedin.com/in/kendall-h-3b828a31b/</a></p>
+    </div>
 
-  <div class="projects-box">
-    <h2>Projects</h2>
-    <ul>
-      <li class="project-item">
-        <img src="path/to/image1.jpg" alt="Project 1 Image">
-        <a href="https://l1l197-kendallh78.shinyapps.io/appshiny/" target="_blank">Project 1</a>
-        <p>An R Shiny application examining the correlation between health factors and cardiovascular disease using a Kaggle dataset.</p>
-      </li>
+    <div class="projects-box">
+      <h2>Projects</h2>
+      <ul>
+        <li class="project-item">
+          <img src="path/to/image1.jpg" alt="Project 1 Image">
+          <a href="https://l1l197-kendallh78.shinyapps.io/appshiny/" target="_blank">Project 1</a>
+          <p>An R Shiny application examining the correlation between health factors and cardiovascular disease using a Kaggle dataset.</p>
+        </li>
 
-      <li class="project-item">
-        <img src="https://drive.google.com/uc?export=view&id=1d1k0PCfBBTnWIKFNj55KCEggz0UW4YWZ" alt="Project 2 Image">
-        <a href="https://well-omniscient-archer.glitch.me/" target="_blank">Project 2</a>
-        <p>A computer vision app demonstrating real-time object detection.</p>
-      </li>
+        <li class="project-item">
+          <img src="https://drive.google.com/uc?export=view&id=1d1k0PCfBBTnWIKFNj55KCEggz0UW4YWZ" alt="Project 2 Image">
+          <a href="https://well-omniscient-archer.glitch.me/" target="_blank">Project 2</a>
+          <p>A computer vision app demonstrating real-time object detection.</p>
+        </li>
 
-      <li class="project-item">
-        <img src="https://drive.google.com/uc?export=view&id=1d1k0PCfBBTnWIKFNj55KCEggz0UW4YWZ" alt="Project 3 Image">
-        <a href="https://public.tableau.com/views/MQPCompetitorDashboard/CompetitorAnalysisDashboard" target="_blank">Project 3</a>
-        <p>A Tableau dashboard for competitor analysis as part of an MQP project.</p>
-      </li>
+        <li class="project-item">
+          <img src="https://drive.google.com/uc?export=view&id=1d1k0PCfBBTnWIKFNj55KCEggz0UW4YWZ" alt="Project 3 Image">
+          <a href="https://public.tableau.com/views/MQPCompetitorDashboard/CompetitorAnalysisDashboard" target="_blank">Project 3</a>
+          <p>A Tableau dashboard for competitor analysis as part of an MQP project.</p>
+        </li>
 
-      <li class="project-item">
-        <img src="https://drive.google.com/uc?export=view&id=1d1k0PCfBBTnWIKFNj55KCEggz0UW4YWZ" alt="Project 4 Image">
-        <a href="https://public.tableau.com/views/MQPTableau/Dashboard" target="_blank">Project 4</a>
-        <p>A Tableau dashboard summarizing key findings and data visualizations for MQP research.</p>
-      </li>
+        <li class="project-item">
+          <img src="https://drive.google.com/uc?export=view&id=1d1k0PCfBBTnWIKFNj55KCEggz0UW4YWZ" alt="Project 4 Image">
+          <a href="https://public.tableau.com/views/MQPTableau/Dashboard" target="_blank">Project 4</a>
+          <p>A Tableau dashboard summarizing key findings and data visualizations for MQP research.</p>
+        </li>
 
-      <li class="project-item">
-        <img src="https://drive.google.com/uc?export=view&id=1d1k0PCfBBTnWIKFNj55KCEggz0UW4YWZ" alt="Project 5 Image">
-        <a href="https://public.tableau.com/shared/2TJ4TBJYQ" target="_blank">Project 5</a>
-        <p>Another visualization-focused project using Tableau for insightful analysis.</p>
-      </li>
-    </ul>
+        <li class="project-item">
+          <img src="https://drive.google.com/uc?export=view&id=1d1k0PCfBBTnWIKFNj55KCEggz0UW4YWZ" alt="Project 5 Image">
+          <a href="https://public.tableau.com/shared/2TJ4TBJYQ" target="_blank">Project 5</a>
+          <p>Another visualization-focused project using Tableau for insightful analysis.</p>
+        </li>
+      </ul>
+    </div>
   </div>
 
   <footer>
