@@ -12,31 +12,26 @@
     /* General Styling */
     body {
       font-family: 'Montserrat', sans-serif;
-      background-color: #ffe6f2; /* Baby Pink Background */
+      background-color: #ffe6f2;
       margin: 0;
-      padding: 20px;
       display: flex;
       justify-content: center;
-    }
-
-    .container {
-      display: flex;
-      gap: 20px;
+      padding: 20px;
       max-width: 1200px;
-      width: 100%;
+      margin: 0 auto;
     }
 
     .about-contact-box {
       max-width: 350px;
+      margin-right: 20px;
       padding: 25px;
       background-color: white;
       border-radius: 15px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-      flex-shrink: 0; /* Prevent box from stretching */
     }
 
     .projects-box {
-      flex-grow: 1; /* Make projects box take up remaining space */
+      flex: 1;
       padding: 25px;
       background-color: white;
       border-radius: 15px;
@@ -59,29 +54,30 @@
       padding: 0;
     }
 
-    .project {
-      margin-bottom: 40px;
+    .project-item {
+      margin-bottom: 30px; /* Spacing between projects */
+      text-align: center;
     }
 
-    .project img {
-      width: 300px;
+    .project-item img {
+      max-width: 100%; 
       height: auto;
+      max-height: 300px; /* Optional: Constrain max height for consistency */
+      margin-bottom: 10px;
       border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for images */
+    }
+
+    .project-item a {
       display: block;
-      margin: 0 auto;
-    }
-
-    .project h3 {
-      margin-top: 10px;
-      font-weight: 700;
-    }
-
-    a {
       color: #ff66b2;
+      font-weight: bold;
+      font-size: 1.2rem;
       text-decoration: none;
+      margin-top: 10px;
     }
 
-    a:hover {
+    .project-item a:hover {
       text-decoration: underline;
     }
 
@@ -97,73 +93,59 @@
 
     /* Responsive Design */
     @media (max-width: 600px) {
-      .container {
-        flex-direction: column;
-      }
-
-      .about-contact-box {
+      .about-contact-box, .projects-box {
         max-width: 100%;
-      }
-
-      .project img {
-        width: 90%;
+        margin: 15px 0;
       }
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <div class="about-contact-box">
-      <h1>Kendall Haddigan</h1>
-      <h2>About Me</h2>
-      <p>Hello! I am a current student at Worcester Polytechnic Institute pursuing my Master's in Artificial Intelligence.</p>
+  <div class="about-contact-box">
+    <h1>Kendall Haddigan</h1>
+    <h2>About Me</h2>
+    <p>Hello! I am a current student at Worcester Polytechnic Institute pursuing my Master's in Artificial Intelligence.</p>
+    
+    <h2>Contact</h2>
+    <p>Email: <a href="#" onclick="openEmail()">kendall.haddigan@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/kendallh78" target="_blank">https://github.com/kendallh78</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/kendall-h-3b828a31b/" target="_blank">https://www.linkedin.com/in/kendall-h-3b828a31b/</a></p>
+  </div>
 
-      <h2>Contact</h2>
-      <p>Email: <a href="#" onclick="openEmail()">kendall.haddigan@gmail.com</a></p>
-      <p>GitHub: <a href="https://github.com/kendallh78" target="_blank">https://github.com/kendallh78</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/kendall-h-3b828a31b/" target="_blank">https://www.linkedin.com/in/kendall-h-3b828a31b/</a></p>
-    </div>
-
-    <div class="projects-box">
-      <h2>Projects</h2>
-
-      <div class="project">
-        <img src="https://drive.google.com/uc?id=1d1k0PCfBBTnWIKFNj55KCEggz0UW4YWZ" alt="R Shiny Application">
-        <h3>R Shiny Application</h3>
+  <div class="projects-box">
+    <h2>Projects</h2>
+    <ul>
+      <li class="project-item">
+        <img src="path/to/image1.jpg" alt="Project 1 Image">
+        <a href="https://l1l197-kendallh78.shinyapps.io/appshiny/" target="_blank">Project 1</a>
         <p>An R Shiny application examining the correlation between health factors and cardiovascular disease using a Kaggle dataset.</p>
-        <a href="https://l1l197-kendallh78.shinyapps.io/appshiny/" target="_blank">View Project</a>
-      </div>
+      </li>
 
-      <div class="project">
-        <img src="https://drive.google.com/uc?id=1d1k0PCfBBTnWIKFNj55KCEggz0UW4YWZ" alt="Computer Vision App">
-        <h3>Computer Vision App</h3>
-        <p>A computer vision app deployed using Glitch.</p>
-        <a href="https://well-omniscient-archer.glitch.me/" target="_blank">View Project</a>
-      </div>
+      <li class="project-item">
+        <img src="https://drive.google.com/uc?export=view&id=1d1k0PCfBBTnWIKFNj55KCEggz0UW4YWZ" alt="Project 2 Image">
+        <a href="https://well-omniscient-archer.glitch.me/" target="_blank">Project 2</a>
+        <p>A computer vision app demonstrating real-time object detection.</p>
+      </li>
 
-      <div class="project">
-        <img src="https://drive.google.com/uc?id=1d1k0PCfBBTnWIKFNj55KCEggz0UW4YWZ" alt="Competitor Analysis Dashboard">
-        <h3>Competitor Analysis Dashboard</h3>
-        <p>A Tableau dashboard analyzing competitors using a public dataset.</p>
-        <a href="https://public.tableau.com/views/MQPCompetitorDashboard/CompetitorAnalysisDashboard" target="_blank">View Dashboard</a>
-      </div>
+      <li class="project-item">
+        <img src="https://drive.google.com/uc?export=view&id=1d1k0PCfBBTnWIKFNj55KCEggz0UW4YWZ" alt="Project 3 Image">
+        <a href="https://public.tableau.com/views/MQPCompetitorDashboard/CompetitorAnalysisDashboard" target="_blank">Project 3</a>
+        <p>A Tableau dashboard for competitor analysis as part of an MQP project.</p>
+      </li>
 
-      <div class="project">
-        <img src="https://drive.google.com/uc?id=1d1k0PCfBBTnWIKFNj55KCEggz0UW4YWZ" alt="Tableau Dashboard">
-        <h3>Tableau Dashboard</h3>
-        <p>A detailed interactive Tableau dashboard for insights and analysis.</p>
-        <a href="https://public.tableau.com/views/MQPTableau/Dashboard" target="_blank">View Dashboard</a>
-      </div>
+      <li class="project-item">
+        <img src="https://drive.google.com/uc?export=view&id=1d1k0PCfBBTnWIKFNj55KCEggz0UW4YWZ" alt="Project 4 Image">
+        <a href="https://public.tableau.com/views/MQPTableau/Dashboard" target="_blank">Project 4</a>
+        <p>A Tableau dashboard summarizing key findings and data visualizations for MQP research.</p>
+      </li>
 
-      <div class="project">
-        <img src="https://drive.google.com/uc?id=1d1k0PCfBBTnWIKFNj55KCEggz0UW4YWZ" alt="Tableau Shared Project">
-        <h3>Shared Tableau Project</h3>
-        <p>A shared Tableau project demonstrating analytical techniques.</p>
-        <a href="https://public.tableau.com/shared/2TJ4TBJYQ" target="_blank">View Project</a>
-      </div>
-
-    </div>
+      <li class="project-item">
+        <img src="https://drive.google.com/uc?export=view&id=1d1k0PCfBBTnWIKFNj55KCEggz0UW4YWZ" alt="Project 5 Image">
+        <a href="https://public.tableau.com/shared/2TJ4TBJYQ" target="_blank">Project 5</a>
+        <p>Another visualization-focused project using Tableau for insightful analysis.</p>
+      </li>
+    </ul>
   </div>
 
   <footer>
