@@ -12,18 +12,18 @@
     /* General Styling */
     body {
       font-family: 'Montserrat', sans-serif;
-      background-color: #ffe6f2; /* Baby Pink Background */
+      background-color: #ffe6f2;
       margin: 0;
       display: flex;
-      justify-content: center; /* Center the content */
-      padding: 20px; /* Padding around the body */
-      max-width: 1200px; /* Limit the max width of the content */
-      margin: 0 auto; /* Center the content */
+      justify-content: center;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .about-contact-box {
-      max-width: 350px; /* Slightly increased width for About and Contact box */
-      margin-right: 20px; /* Space between the boxes */
+      max-width: 350px;
+      margin-right: 20px;
       padding: 25px;
       background-color: white;
       border-radius: 15px;
@@ -31,7 +31,7 @@
     }
 
     .projects-box {
-      flex: 1; /* Allow this box to take up the remaining space */
+      flex: 1;
       padding: 25px;
       background-color: white;
       border-radius: 15px;
@@ -39,40 +39,45 @@
     }
 
     h1, h2 {
-      color: #cc6699; /* Soft Pink Titles */
+      color: #cc6699;
       text-align: center;
     }
 
-    p, ul {
+    p {
       color: #444;
       line-height: 1.6;
       text-align: center;
     }
 
     ul {
-      list-style-type: none; /* Remove bullet points */
-      padding: 0; /* Remove default padding */
+      list-style-type: none;
+      padding: 0;
     }
 
-    li {
-      margin-bottom: 10px; /* Add spacing between items */
-      display: flex; /* Use flexbox for alignment */
-      align-items: center; /* Center items vertically */
+    .project-item {
+      margin-bottom: 30px; /* Spacing between projects */
+      text-align: center;
     }
 
-    .project-image {
-      width: 50px; /* Set a fixed width for project images */
-      height: 50px; /* Set a fixed height for project images */
-      margin-right: 10px; /* Space between image and text */
-      border-radius: 5px; /* Slightly rounded corners for images */
+    .project-item img {
+      max-width: 100%; 
+      height: auto;
+      max-height: 300px; /* Optional: Constrain max height for consistency */
+      margin-bottom: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for images */
     }
 
-    a {
-      color: #ff66b2; 
+    .project-item a {
+      display: block;
+      color: #ff66b2;
+      font-weight: bold;
+      font-size: 1.2rem;
       text-decoration: none;
+      margin-top: 10px;
     }
 
-    a:hover {
+    .project-item a:hover {
       text-decoration: underline;
     }
 
@@ -89,13 +94,8 @@
     /* Responsive Design */
     @media (max-width: 600px) {
       .about-contact-box, .projects-box {
-        max-width: 100%; /* Full width on small screens */
-        margin: 15px 0; /* Margin for spacing */
-      }
-      
-      .project-image {
-        width: 30px; /* Smaller image size on mobile */
-        height: 30px; /* Smaller image size on mobile */
+        max-width: 100%;
+        margin: 15px 0;
       }
     }
   </style>
@@ -116,27 +116,36 @@
   <div class="projects-box">
     <h2>Projects</h2>
     <ul>
-      <li>
-        <img class="project-image" src="path/to/image1.jpg" alt="Project 1 Image"> 
-        <a href="https://l1l197-kendallh78.shinyapps.io/appshiny/" target="_blank">Project 1</a>: An R Shiny application examining the correlation between health factors and cardiovascular disease using a Kaggle dataset.
+      <li class="project-item">
+        <img src="path/to/image1.jpg" alt="Project 1 Image">
+        <a href="https://l1l197-kendallh78.shinyapps.io/appshiny/" target="_blank">Project 1</a>
+        <p>An R Shiny application examining the correlation between health factors and cardiovascular disease using a Kaggle dataset.</p>
       </li>
-      <li>
-        <img class="project-image" src="https://drive.google.com/file/d/1d1k0PCfBBTnWIKFNj55KCEggz0UW4YWZ/view?usp=sharing" alt="Project 2 Image"> 
-        <a href="https://well-omniscient-archer.glitch.me/" target="_blank">Project 2</a>: A computer vision app.
-      </li>
-      <li>
-        <img class="project-image" src="https://drive.google.com/file/d/1d1k0PCfBBTnWIKFNj55KCEggz0UW4YWZ/view?usp=sharing" alt="Project 2 Image"> 
-        <a href="https://public.tableau.com/views/MQPCompetitorDashboard/CompetitorAnalysisDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank">Project 2</a>: A computer vision app.
-      <li>
-        <img class="project-image" src="https://drive.google.com/file/d/1d1k0PCfBBTnWIKFNj55KCEggz0UW4YWZ/view?usp=sharing" alt="Project 2 Image"> 
-        <a href="https://public.tableau.com/views/MQPTableau/Dashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank">Project 2</a>: A computer vision app.
-      </li>
-       <li>
-        <img class="project-image" src="https://drive.google.com/file/d/1d1k0PCfBBTnWIKFNj55KCEggz0UW4YWZ/view?usp=sharing" alt="Project 2 Image"> 
-        <a href="https://public.tableau.com/shared/2TJ4TBJYQ?:display_count=n&:origin=viz_share_link" target="_blank">Project 2</a>: A computer vision app.
-      </li>
-      </li>    </ul>
 
+      <li class="project-item">
+        <img src="https://drive.google.com/uc?export=view&id=1d1k0PCfBBTnWIKFNj55KCEggz0UW4YWZ" alt="Project 2 Image">
+        <a href="https://well-omniscient-archer.glitch.me/" target="_blank">Project 2</a>
+        <p>A computer vision app demonstrating real-time object detection.</p>
+      </li>
+
+      <li class="project-item">
+        <img src="https://drive.google.com/uc?export=view&id=1d1k0PCfBBTnWIKFNj55KCEggz0UW4YWZ" alt="Project 3 Image">
+        <a href="https://public.tableau.com/views/MQPCompetitorDashboard/CompetitorAnalysisDashboard" target="_blank">Project 3</a>
+        <p>A Tableau dashboard for competitor analysis as part of an MQP project.</p>
+      </li>
+
+      <li class="project-item">
+        <img src="https://drive.google.com/uc?export=view&id=1d1k0PCfBBTnWIKFNj55KCEggz0UW4YWZ" alt="Project 4 Image">
+        <a href="https://public.tableau.com/views/MQPTableau/Dashboard" target="_blank">Project 4</a>
+        <p>A Tableau dashboard summarizing key findings and data visualizations for MQP research.</p>
+      </li>
+
+      <li class="project-item">
+        <img src="https://drive.google.com/uc?export=view&id=1d1k0PCfBBTnWIKFNj55KCEggz0UW4YWZ" alt="Project 5 Image">
+        <a href="https://public.tableau.com/shared/2TJ4TBJYQ" target="_blank">Project 5</a>
+        <p>Another visualization-focused project using Tableau for insightful analysis.</p>
+      </li>
+    </ul>
   </div>
 
   <footer>
