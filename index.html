@@ -3,6 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kendall's Portfolio</title>
 
   <!-- Google Fonts: Montserrat -->
@@ -23,8 +28,14 @@
       margin: 0 auto;
     }
 
-    .about-contact-box {
+    .side-boxes {
       width: 30%;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .about-contact-box {
       padding: 20px;
       background-color: white;
       border-radius: 15px;
@@ -54,6 +65,21 @@
       line-height: 1.6;
       text-align: center;
       margin: 0;
+    }
+
+    .skills-list {
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .skills-list li {
+      font-family: 'Courier New', Courier, monospace;
+      color: white;
+      background-color: #cc6699;
+      padding: 5px 10px;
+      margin: 5px 0;
+      display: inline-block;
+      border-radius: 5px;
     }
 
     ul {
@@ -127,7 +153,7 @@
         align-items: center;
       }
 
-      .about-contact-box, .projects-box {
+      .side-boxes, .projects-box {
         width: 100%;
         margin: 15px 0;
       }
@@ -136,37 +162,39 @@
 </head>
 <body>
 
-  <div class="about-contact-box">
-    <h1>Kendall Haddigan</h1>
-    <h2>About Me</h2>
-    <p>Hello! I am a current student at Worcester Polytechnic Institute pursuing my Master's in Artificial Intelligence.</p>
-    
-    <h2>Contact</h2>
-    <div class="social-icons">
-      <a href="mailto:kendall.haddigan@gmail.com" target="_blank">
-        <img src="images/square email.png" alt="Email Icon">
-      </a>
-      <a href="https://github.com/kendallh78" target="_blank">
-        <img src="images/github.png" alt="GitHub Icon">
-      </a>
-      <a href="https://www.linkedin.com/in/kendall-h-3b828a31b/" target="_blank">
-        <img src="images/linkedinblack.png" alt="LinkedIn Icon">
-      </a>
+  <div class="side-boxes">
+    <div class="about-contact-box">
+      <h1>Kendall Haddigan</h1>
+      <h2>About Me</h2>
+      <p>Hello! I am a current student at Worcester Polytechnic Institute pursuing my Master's in Artificial Intelligence.</p>
+      
+      <h2>Contact</h2>
+      <div class="social-icons">
+        <a href="mailto:kendall.haddigan@gmail.com" target="_blank">
+          <img src="images/square email.png" alt="Email Icon">
+        </a>
+        <a href="https://github.com/kendallh78" target="_blank">
+          <img src="images/github.png" alt="GitHub Icon">
+        </a>
+        <a href="https://www.linkedin.com/in/kendall-h-3b828a31b/" target="_blank">
+          <img src="images/linkedinblack.png" alt="LinkedIn Icon">
+        </a>
+      </div>
+    </div>
+
+    <!-- Skills Box -->
+    <div class="about-contact-box">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>Python</li>
+        <li>Machine Learning</li>
+        <li>Deep Learning</li>
+        <li>Data Analysis</li>
+        <li>Computer Vision</li>
+        <li>Artificial Intelligence</li>
+      </ul>
     </div>
   </div>
-
-  <div class="about-contact-box">
-    <h2>Skills</h2>
-    <ul class="skills-list">
-      <li>Python</li>
-      <li>Machine Learning</li>
-      <li>Deep Learning</li>
-      <li>Data Analysis</li>
-      <li>Computer Vision</li>
-      <li>Artificial Intelligence</li>
-    </ul>
-  </div>
-
 
   <div class="projects-box">
     <h1>Projects</h1>
