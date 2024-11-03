@@ -17,14 +17,14 @@
       padding: 20px;
       display: flex;
       justify-content: center;
-      align-items: flex-start; /* Align items at the top */
+      align-items: flex-start;
       gap: 20px;
       max-width: 1200px;
       margin: 0 auto;
     }
 
     .about-contact-box {
-      width: 30%; /* Adjust width to prevent excessive height */
+      width: 30%;
       padding: 20px;
       background-color: white;
       border-radius: 15px;
@@ -40,7 +40,7 @@
       background-color: white;
       border-radius: 15px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-      overflow-y: auto
+      overflow-y: auto;
     }
 
     h1, h2 {
@@ -88,6 +88,28 @@
       text-decoration: underline;
     }
 
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      display: inline-block;
+    }
+
+    .social-icons img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      transition: transform 0.2s;
+    }
+
+    .social-icons img:hover {
+      transform: scale(1.1);
+    }
+
     footer {
       text-align: center;
       padding: 10px;
@@ -120,10 +142,19 @@
     <p>Hello! I am a current student at Worcester Polytechnic Institute pursuing my Master's in Artificial Intelligence.</p>
     
     <h2>Contact</h2>
-    <p>Email: <a href="#" onclick="openEmail()">kendall.haddigan@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/kendallh78" target="_blank">https://github.com/kendallh78</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/kendall-h-3b828a31b/" target="_blank">https://www.linkedin.com/in/kendall-h-3b828a31b/</a></p>
+    <div class="social-icons">
+      <a href="mailto:kendall.haddigan@gmail.com" target="_blank">
+        <img src="images/email-icon.png" alt="Email Icon">
+      </a>
+      <a href="https://github.com/kendallh78" target="_blank">
+        <img src="images/github-icon.png" alt="GitHub Icon">
+      </a>
+      <a href="https://www.linkedin.com/in/kendall-h-3b828a31b/" target="_blank">
+        <img src="images/linkedin-icon.png" alt="LinkedIn Icon">
+      </a>
+    </div>
   </div>
+
 
   <div class="projects-box">
     <h1>Projects</h1>
