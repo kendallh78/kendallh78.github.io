@@ -137,11 +137,12 @@
       width: 30px;
       height: 30px;
       filter: invert(54%) sepia(33%) saturate(596%) hue-rotate(280deg) brightness(92%) contrast(95%);
-      transition: transform 0.2s;
+      transition: transform 0.2s, filter 0.2s; /* Add transition for scaling and filter */
     }
-
+    
     .social-icons img:hover {
-      transform: scale(1.1);
+      transform: scale(1.1); /* Scale effect */
+      filter: brightness(1.2); /* Slightly brighten on hover */
     }
 
     footer {
