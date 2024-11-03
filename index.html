@@ -14,7 +14,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
 
   <style>
-    /* General Styling */
     body {
       font-family: 'Montserrat', sans-serif;
       background-color: #ffe6f2;
@@ -84,9 +83,9 @@
     }
     
     .skills-list li:hover {
-      background-color: #ff99cc; /* Lighter pink for hover */
-      transform: scale(1.05); /* Slightly enlarge */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+      background-color: #ff99cc; 
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
 
@@ -116,10 +115,13 @@
       font-size: 1.2rem;
       text-decoration: none;
       margin-top: 10px;
+      transition: color 0.3s, text-shadow 0.3s; 
     }
-
+    
     .project-item a:hover {
       text-decoration: underline;
+      color: #cc6699; 
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); 
     }
 
     .social-icons {
@@ -137,12 +139,12 @@
       width: 30px;
       height: 30px;
       filter: invert(54%) sepia(33%) saturate(596%) hue-rotate(280deg) brightness(92%) contrast(95%);
-      transition: transform 0.2s, filter 0.2s; /* Add transition for scaling and filter */
+      transition: transform 0.2s, filter 0.2s; 
     }
     
     .social-icons img:hover {
       transform: scale(1.1); /* Scale effect */
-      filter: invert(54%) sepia(33%) saturate(596%) hue-rotate(280deg) brightness(120%) contrast(95%); /* Maintain the same color and brighten slightly */
+      filter: invert(54%) sepia(33%) saturate(596%) hue-rotate(280deg) brightness(120%) contrast(95%); 
     }
 
     footer {
