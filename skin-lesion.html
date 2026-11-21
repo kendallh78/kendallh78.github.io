@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skin Lesion Classification | Kendall Haddigan</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./portfolio.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="home-link" href="./index.html" aria-label="Home">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        <path d="m3 10 9-7 9 7M5 9v12h14V9M10 21v-7h4v7"/>
+      </svg>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="./index.html#work">Projects</a>
+      <a href="https://github.com/kendallh78">GitHub</a>
+    </nav>
+  </header>
+  <main class="wrap case-study" id="main">
+    <header class="case-header">
+      <p class="eyebrow">Transfer learning</p>
+      <h1>Skin Lesion Classification</h1>
+      <p class="intro">Comparing deep learning approaches to classifying benign and malignant skin lesion images.</p>
+    </header>
+    <figure>
+      <div class="comparison case-image lesion-transition" id="lesion-comparison">
+        <img src="./images/lesion-after.png" alt="Lesion image after hair removal">
+        <img class="comparison-layer" src="./images/lesion-before.png" alt="Original lesion image with hair visible">
+        <span class="comparison-line" aria-hidden="true"></span>
+        <span class="image-label image-label-left" aria-hidden="true">Original</span>
+        <span class="image-label image-label-right" aria-hidden="true">Preprocessed</span>
+      </div>
+      <figcaption>
+        <div class="compare-control" hidden>
+          <label for="lesion-split">Compare preprocessing</label>
+          <input id="lesion-split" type="range" min="0" max="100" value="52" aria-controls="lesion-comparison" data-comparison-label="original image" aria-valuetext="52% original image">
+        </div>
+        <p>The same lesion before and after hair removal during preprocessing.</p>
+      </figcaption>
+    </figure>
+    <section class="case-method" aria-labelledby="method">
+      <h2 id="method">Approach</h2>
+      <p class="project-skills">Image Preprocessing<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span>Transfer Learning<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span>Data Augmentation<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span>ROC Analysis</p>
+      <p>The project applied image preprocessing, trained EfficientNet and ResNet18 models, and evaluated classification performance with ROC analysis and threshold tuning.</p>
+      <a class="button" href="https://github.com/kendallh78/Skin-Cancer-Image-Classification">View the repository</a>
+    </section>
+  </main>
+  <footer class="site-footer wrap"><a href="./index.html#work">Back to projects</a></footer>
+</body>
+</html>

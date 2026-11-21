@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A case study on image resolution and satellite object detection.">
+  <title>Satellite Object Detection | Kendall Haddigan</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./portfolio.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="home-link" href="./index.html" aria-label="Home">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        <path d="m3 10 9-7 9 7M5 9v12h14V9M10 21v-7h4v7"/>
+      </svg>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="./index.html#work">Projects</a>
+      <a href="https://github.com/kendallh78">GitHub</a>
+    </nav>
+  </header>
+  <main class="wrap case-study" id="main">
+    <header class="case-header">
+      <p class="eyebrow">Graduate qualifying project · BAE Systems</p>
+      <h1>Satellite Object Detection</h1>
+      <p class="intro">How much image detail does an object detector need, and how does that change by class?</p>
+    </header>
+    <figure>
+      <div class="comparison case-image satellite-transition" id="satellite-comparison">
+        <img src="./images/satellite-144.png" alt="144 by 144 pixel view of two annotated planes">
+        <img class="comparison-layer" src="./images/satellite-1152.png" alt="1152 by 1152 pixel view of the same two planes">
+        <span class="comparison-line" aria-hidden="true"></span>
+        <span class="image-label image-label-left" aria-hidden="true">1152 px</span>
+        <span class="image-label image-label-right" aria-hidden="true">144 px</span>
+      </div>
+      <figcaption>
+        <div class="compare-control" hidden>
+          <label for="resolution">Compare resolutions</label>
+          <input id="resolution" type="range" aria-controls="satellite-comparison" data-comparison-label="higher-resolution view" min="0" max="100" value="52" aria-valuetext="52% higher-resolution view">
+        </div>
+        <p>The same scene at two resolutions. The annotations come from the original project figure.</p>
+      </figcaption>
+    </figure>
+    <section class="case-method" aria-labelledby="method">
+      <h2 id="method">Approach</h2>
+      <p class="project-skills">Python<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span>YOLOv8 Fine-Tuning<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span>Image Preprocessing<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span>Model Evaluation</p>
+      <ol>
+        <li><strong>Prepare the data.</strong> Tile satellite images and convert annotations to YOLO format.</li>
+        <li><strong>Fine-tune the detector.</strong> Train a YOLOv8 model and evaluate it on progressively degraded imagery.</li>
+        <li><strong>Compare performance by class.</strong> Use the performance curve to look for the point where additional resolution yields smaller gains.</li>
+      </ol>
+      <a class="button" href="https://github.com/johnprom/bae-systems-gqp-24">View code and methodology</a>
+    </section>
+  </main>
+  <footer class="site-footer wrap"><a href="./index.html#work">Back to projects</a></footer>
+</body>
+</html>

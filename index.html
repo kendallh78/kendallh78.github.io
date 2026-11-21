@@ -1,302 +1,140 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kendall's Portfolio</title>
-
-  <!-- Google Fonts: Montserrat -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background-color: #ffe6f2;
-      margin: 0;
-      padding: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .side-boxes {
-      width: 30%;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    .about-contact-box {
-      padding: 20px;
-      background-color: white;
-      border-radius: 15px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    .projects-box {
-      flex: 1;
-      padding: 20px;
-      background-color: white;
-      border-radius: 15px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-      overflow-y: auto;
-    }
-
-    h1, h2 {
-      color: #cc6699;
-      text-align: center;
-      margin: 0;
-    }
-
-    p {
-      color: #444;
-      line-height: 1.6;
-      text-align: center;
-      margin: 0;
-    }
-
-    .skills-list {
-      text-align: center;
-      font-weight: bold;
-    }
-
-    .skills-list li {
-      font-family: 'Monaco';
-      color: white;
-      background-color: #cc6699;
-      padding: 5px 10px;
-      margin: 5px 0;
-      display: inline-block;
-      border-radius: 5px;
-      transition: background-color 0.3s, transform 0.2s;
-    }
-    
-    .skills-list li:hover {
-      background-color: #ff99cc; 
-      transform: scale(1.05);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    .project-item {
-      margin-bottom: 30px;
-      text-align: center;
-    }
-
-    .project-item img {
-      max-width: 100%;
-      height: auto;
-      max-height: 300px;
-      margin-bottom: 10px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    }
-
-    .project-item a {
-      display: block;
-      color: #ff66b2;
-      font-weight: bold;
-      font-size: 1.2rem;
-      text-decoration: none;
-      margin-top: 10px;
-    }
-
-    .project-item a:hover {
-      text-decoration: underline;
-    }
-
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 10px;
-    }
-
-    .social-icons a {
-      display: inline-block;
-    }
-
-    .social-icons img {
-      width: 30px;
-      height: 30px;
-      filter: invert(54%) sepia(33%) saturate(596%) hue-rotate(280deg) brightness(92%) contrast(95%);
-      transition: transform 0.2s, filter 0.2s; 
-    }
-    
-    .social-icons img:hover {
-      transform: scale(1.1); /* Scale effect */
-      filter: invert(54%) sepia(33%) saturate(596%) hue-rotate(280deg) brightness(120%) contrast(95%); 
-    }
-
-    footer {
-      text-align: center;
-      padding: 10px;
-      background-color: #ff99cc;
-      color: white;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 800px) {
-      body {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .side-boxes, .projects-box {
-        width: 100%;
-        margin: 15px 0;
-      }
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kendall Haddigan’s portfolio of data science, machine learning, and software engineering.">
+  <title>Kendall Haddigan | Data Science, Machine Learning &amp; Software Engineering</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./portfolio.js" defer></script>
 </head>
 <body>
-
-  <div class="side-boxes">
-    <div class="about-contact-box">
-      <h1>Kendall Haddigan</h1>
-      <h2>About Me</h2>
-      <p>Hello! I recently graduated from Worcester Polytechnic Institute and completed my Master's in Artificial Intelligence in December 2024.</p>
-      
-      <h2>Contact</h2>
-      <div class="social-icons">
-        <a href="mailto:kendall.haddigan@gmail.com" target="_blank">
-          <img src="images/square email.png" alt="Email Icon">
-        </a>
-        <a href="https://github.com/kendallh78" target="_blank">
-          <img src="images/github.png" alt="GitHub Icon">
-        </a>
-        <a href="https://www.linkedin.com/in/kendall-haddigan-3b828a31b/" target="_blank">
-          <img src="images/linkedinblack.png" alt="LinkedIn Icon">
-        </a>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="home-link" href="./index.html" aria-label="Home">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        <path d="m3 10 9-7 9 7M5 9v12h14V9M10 21v-7h4v7"/>
+      </svg>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#work">Projects</a>
+      <a href="#about">About</a>
+      <a href="https://github.com/kendallh78">GitHub</a>
+    </nav>
+  </header>
+  <main class="wrap" id="main">
+    <section class="hero" aria-labelledby="name">
+      <div class="hero-copy">
+        <p class="eyebrow">Data Science · Machine Learning · Software Engineering</p>
+        <h1 id="name">Kendall Haddigan</h1>
+        <div class="hero-crease" aria-hidden="true"></div>
+        <p class="intro">My background is in data science and machine learning, with professional experience building full-stack ML applications.</p>
+        <a class="button" href="#work">Explore projects</a>
       </div>
-    </div>
-
-    <!-- Skills Box -->
-    <div class="about-contact-box">
-      <h2>Skills</h2>
-      <ul class="skills-list">
-        <li>Python</li>
-        <li>R</li>
-        <li>SQL</li>
-        <li>NumPy</li>
-        <li>pandas</li>
-        <li>Tensorflow</li>
-        <li>PyTorch</li>
-        <li>HTML/CSS</li>
-        <li>OpenCV</li>
-        <li>CNNs</li>
-        <li>RNNs</li>
-        <li>LLMs</li>
-        <li>Tableau</li>
-        <li>Scala</li>
-        <li>Deep Learning</li>
-        <li>ggplot2</li>
-        <li>Docker</li>
-        <li>Apache Spark</li>
-        <li>YOLO</li>
-        <li>D3.js</li>
-        <li>Scikit-learn</li>
-        <li>SIFT/SURF</li>
-        <li>Hadoop</li>
-        <li>Stochastic Gradient Descent</li>
-
+    </section>
+    <section id="work" aria-labelledby="work-title">
+      <div class="section-heading"><h2 id="work-title">Selected projects</h2></div>
+      <div class="project-grid">
+        <article class="project">
+          <div class="comparison project-image satellite-transition" id="satellite-comparison">
+            <img src="./images/satellite-144.png" alt="Lower-resolution satellite crop with two annotated planes">
+            <img class="comparison-layer" src="./images/satellite-1152.png" alt="Higher-resolution view of the same scene">
+            <span class="comparison-line" aria-hidden="true"></span>
+            <span class="image-label image-label-left" aria-hidden="true">1152 px</span>
+            <span class="image-label image-label-right" aria-hidden="true">144 px</span>
+          </div>
+          <div class="project-copy">
+            <div class="compare-control" hidden>
+              <label for="resolution">Compare resolutions</label>
+              <input id="resolution" type="range" aria-controls="satellite-comparison" data-comparison-label="higher-resolution view" min="0" max="100" value="52" aria-valuetext="52% higher-resolution view">
+            </div>
+            <p class="eyebrow">Computer vision · YOLOv8</p>
+            <div class="project-title">
+              <h3>Satellite Object Detection</h3>
+              <a class="project-arrow" href="./satellite.html" aria-label="Open Satellite Object Detection case study"><span aria-hidden="true">→</span></a>
+            </div>
+            <p>A pipeline for testing how satellite image resolution affects object detection.</p>
+            <p class="project-skills">Python<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span>YOLOv8 Fine-Tuning<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span>Image Preprocessing<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span>Model Evaluation</p>
+          </div>
+        </article>
+        <article class="project">
+          <div class="project-image project-image-paper">
+            <img class="financebench-transition" src="./images/Financial%20Questions%20LLMs.png" alt="Figure from the FinanceBench project" loading="lazy">
+          </div>
+          <div class="project-copy">
+            <p class="eyebrow">LLM evaluation</p>
+            <div class="project-title">
+              <h3>FinanceBench</h3>
+              <a class="project-arrow" href="./financebench.html" aria-label="Open FinanceBench case study"><span aria-hidden="true">→</span></a>
+            </div>
+            <p>Compared how language models answer questions grounded in financial documents.</p>
+            <p class="project-skills">LLM Evaluation<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span>Benchmark Design<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span>Financial Question Answering</p>
+          </div>
+        </article>
+        <article class="project">
+          <div class="comparison project-image lesion-transition" id="lesion-comparison">
+            <img src="./images/lesion-after.png" alt="Lesion image after hair removal">
+            <img class="comparison-layer" src="./images/lesion-before.png" alt="Original lesion image with hair visible">
+            <span class="comparison-line" aria-hidden="true"></span>
+            <span class="image-label image-label-left" aria-hidden="true">Original</span>
+            <span class="image-label image-label-right" aria-hidden="true">Preprocessed</span>
+          </div>
+          <div class="project-copy">
+            <div class="compare-control" hidden>
+              <label for="lesion-split">Compare preprocessing</label>
+              <input id="lesion-split" type="range" min="0" max="100" value="52" aria-controls="lesion-comparison" data-comparison-label="original image" aria-valuetext="52% original image">
+            </div>
+            <p class="eyebrow">Transfer learning</p>
+            <div class="project-title">
+              <h3>Skin Lesion Classification</h3>
+              <a class="project-arrow" href="./skin-lesion.html" aria-label="Open Skin Lesion Classification case study"><span aria-hidden="true">→</span></a>
+            </div>
+            <p>Preprocessed lesion images and evaluated classifiers using EfficientNet and ResNet18.</p>
+            <p class="project-skills">Image Preprocessing<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span>Transfer Learning<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span>Data Augmentation<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span>ROC Analysis</p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="profile-section" id="about" aria-labelledby="about-title">
+      <h2 id="about-title">About</h2>
+      <div>
+        <p>My interest in statistics and machine learning led me to pursue a B.S. in Data Science and an M.S. in Artificial Intelligence at Worcester Polytechnic Institute.</p>
+        <p>I enjoy understanding patterns in data, experimenting with models, and finding ways to turn technical ideas into practical solutions. That interest has carried into my professional experience, where I've worked across machine learning workflows, full-stack application development, and production systems.</p>
+        <p>I'm particularly drawn to opportunities that combine analytical problem-solving with hands-on engineering, whether that means developing models, building AI-powered applications, or working with others to solve complex technical challenges.</p>
+        <p>In my previous role, I helped develop enterprise machine learning applications, working across data preprocessing, clustering workflows, full-stack interfaces, and backend integrations.</p>
+        <p>I developed reusable feature transformations, designed configurable ML workflows, and built user-facing features for complex modeling routines. I collaborated across teams to validate simulations and port workflows across application versions. I also investigated and resolved production issues involving Azure, application services, and SQL Server.</p>
+      </div>
+    </section>
+    <details class="archive">
+      <summary>More projects</summary>
+      <ul>
+        <li><a href="https://l1l197-kendallh78.shinyapps.io/r_shiny/">R Shiny Application</a><br><span class="project-skills">R<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span>Shiny<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span>Feature Engineering<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span>Random Forest Classification</span></li>
+        <li><a href="https://docs.google.com/presentation/d/1i0IDJRD3Fgem1OZl95vP1CrycOi2n9uCUO3fP23TTro/edit?usp=sharing">Uber Business Analysis</a><br><span class="project-skills">Exploratory Data Analysis<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span>Business Analytics</span></li>
+        <li><a href="https://wp.wpi.edu/hawaii/enhancing-outreach-to-promote-water-conservation-practices-on-oahu/">Water Conservation Outreach on Oʻahu</a><br><span class="project-skills">Data Analysis<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span>Stakeholder Outreach<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span>Research Communication</span></li>
+        <li><a href="https://public.tableau.com/views/MQPCompetitorDashboard/CompetitorAnalysisDashboard">Competitor Data Analysis</a><br><span class="project-skills">Tableau<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span>Dashboard Design<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span>Competitor Analysis</span></li>
+        <li><a href="https://public.tableau.com/views/MQPTableau/Dashboard">Company Data Analysis</a><br><span class="project-skills">Tableau<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span>Data Visualization<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span>Dashboard Design</span></li>
+        <li><a href="https://public.tableau.com/shared/2TJ4TBJYQ">Vending Machine Analytics</a><br><span class="project-skills">Tableau<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span>Business Intelligence<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span>Data Visualization</span></li>
+        <li><a href="./images/Heart%20Data%20Visualization.png">Heart Data Visualization</a><br><span class="project-skills">JavaScript<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span>D3.js<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span>Linked Visualizations</span></li>
       </ul>
-    </div>
-  </div>
-  
-  
-  <div class="projects-box">
-    <h1>Projects</h1>
-    <ul>
-
-    <li class="project-item">
-    <img src="images/Satellite Image Object Detection.png" alt="BAE Image">
-    <a href="https://github.com/johnprom/bae-systems-gqp-24" target="_blank">Determining Optimal Pixel Resolution for Object Detection in Satellite Imagery: A Class-Specific Approach</a>
-    <p>Graduate Qualifying Project in collaboration with BAE systems focusing on identifying the elbow for satellite image resolution and reliable object detection results.</p>
-  </li>
-
-  <li class="project-item">
-    <img src="images/Skin Lesion Preprocess.png" alt="Skin Cancer Image">
-    <a href="https://github.com/kendallh78/Skin-Cancer-Image-Classification" target="_blank">Skin Lesion Classification Using Deep Learning</a>
-    <p>This project focuses on automated skin lesion classification using deep learning techniques. It involves preprocessing medical images to enhance clarity, training an advanced neural network (EfficientNet/ResNet18) on a dataset of benign and malignant lesions, and optimizing performance with techniques like mixup augmentation and threshold tuning. The model is evaluated using accuracy, loss curves, and ROC analysis, providing a powerful tool for early skin cancer detection.</p>
-  </li>
-
-  <li class="project-item">
-    <img src="images/Financial Questions LLMs.png" alt="Project 7 Image">
-    <a href="https://www.overleaf.com/read/skxcwfkbkxyy#6de647" target="_blank">Finance Bench: A New Benchmark for Financial Question Answering using LLMs</a>
-    <p>Project analyzing which Large Language Model (LLM) performs best to analyze financial data and answer questions.</p>
-  </li>
-
-  <li class="project-item">
-    <img src="images/RShiny App.png" alt="Project 1 Image">
-    <a href="https://l1l197-kendallh78.shinyapps.io/r_shiny/" target="_blank">R Shiny Application</a>
-    <p>This project uses machine learning to predict the risk of cardiovascular disease based on health indicators like age, BMI, cholesterol, and blood pressure. Key steps include data preprocessing, feature engineering (e.g., BMI and age groups), and applying models like Random Forest for classification. The app is deployed using Shiny for interactive predictions and analysis.</p>
-  </li>
-
-  <li class="project-item">
-    <img src="images/Uber.png" alt="Project 8 Image">
-    <a href="https://docs.google.com/presentation/d/1i0IDJRD3Fgem1OZl95vP1CrycOi2n9uCUO3fP23TTro/edit?usp=sharing" target="_blank">Uber Business Analysis</a>
-    <p>Project analyzing extensive Uber dataset to find business solutions to optimize profit.</p>
-  </li>
-
-  <li class="project-item">
-    <img src="images/BWS.png" alt="Project 8 Image">
-    <a href="https://wp.wpi.edu/hawaii/enhancing-outreach-to-promote-water-conservation-practices-on-oahu/" target="_blank">Interactive Qualifying Project at the Honolulu Board of Water Supply</a>
-    <p>Junior year IQP Project in Honolulu, Hawaii, with the Board of Water Supply to collaborate in a group of four, analyze data, raise awareness about the environmental and freshwater challenges of the Red Hill Crisis, and create new means of communication to reach residents.</p>
-  </li>
-
-  <li class="project-item">
-    <img src="images/Competitor Dashboard.png" alt="Project 3 Image">
-    <a href="https://public.tableau.com/views/MQPCompetitorDashboard/CompetitorAnalysisDashboard" target="_blank">Developing a Database for Competitor Data Analysis</a>
-    <p>A Tableau dashboard for competitor analysis as part of an MQP project.</p>
-  </li>
-
-  <li class="project-item">
-    <img src="images/Heart Data Visualization.png" alt="Project 2 Image">
-    <a href="https://well-omniscient-archer.glitch.me/" target="_blank">First HTML Project</a>
-    <p>Attempt to create an interactive visualization using D3 with at least two linked views, where interactions in one view update the other, using a Kaggle dataset.</p>
-  </li>
-
-  <!-- Remaining projects (if any were missed) -->
-  <li class="project-item">
-    <img src="images/MQP Dashboard.png" alt="Project 4 Image">
-    <a href="https://public.tableau.com/views/MQPTableau/Dashboard" target="_blank">Developing a Database for Company Data Analysis</a>
-    <p>A Tableau dashboard summarizing key findings and data visualizations for Hardware Tool Company for MQP research.</p>
-  </li>
-
-  <li class="project-item">
-    <img src="images/Vending Machine Analytics.png" alt="Project 5 Image">
-    <a href="https://public.tableau.com/shared/2TJ4TBJYQ" target="_blank">Business Intelligence: Vending Machine Analytics</a>
-    <p>Campus vending machine analysis using Tableau.</p>
-  </li>
-</ul>
-
-      
-  </div>
-
-  <footer>
-    <p>&copy; 2025 Kendall's Portfolio</p>
+    </details>
+  </main>
+  <footer class="site-footer wrap">
+    <span>Kendall Haddigan</span>
+    <nav class="footer-contact" aria-label="Contact">
+      <a href="mailto:kendall.haddigan@gmail.com" aria-label="Email Kendall">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <rect x="3" y="5" width="18" height="14" rx="2"/>
+          <path d="m4 7 8 6 8-6"/>
+        </svg>
+      </a>
+      <a href="https://www.linkedin.com/in/kendall-haddigan-3b828a31b/" aria-label="Kendall on LinkedIn">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <rect x="2" y="2" width="20" height="20" rx="3" fill="currentColor"/>
+          <circle cx="7.2" cy="7.3" r="1.35" fill="var(--blush)"/>
+          <path d="M7.2 11v6.6m4.5 0V11m0 2.5c0-3.1 5.3-3.4 5.3.2v3.9" fill="none" stroke="var(--blush)" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+      </a>
+    </nav>
   </footer>
-
-  <script>
-    function openEmail() {
-      window.open('mailto:kendall.haddigan@gmail.com', '_blank');
-    }
-  </script>
-
 </body>
 </html>
