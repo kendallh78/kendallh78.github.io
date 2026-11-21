@@ -17,9 +17,9 @@
       </svg>
     </a>
     <nav aria-label="Main navigation">
-      <a href="#work">Projects</a>
-      <a href="#about">About</a>
-      <a href="https://github.com/kendallh78">GitHub</a>
+      <a href="#work" class="header-icon-link" aria-label="Projects" title="Projects"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg></a>
+      <a href="#about" class="header-icon-link" aria-label="About" title="About"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="3.5"/><path d="M5 20v-1a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v1"/></svg></a>
+      <a href="https://github.com/kendallh78" class="header-icon-link" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38v-1.49c-2.23.48-2.7-.94-2.7-.94-.36-.92-.89-1.17-.89-1.17-.73-.5.06-.49.06-.49.8.06 1.22.82 1.22.82.71 1.22 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.67 7.67 0 0 1 4 0c1.53-1.03 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.74.54 1.49v2.2c0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg></a>
     </nav>
   </header>
   <main class="wrap" id="main">
@@ -42,12 +42,12 @@
             <span class="comparison-line" aria-hidden="true"></span>
             <span class="image-label image-label-left" aria-hidden="true">1152 px</span>
             <span class="image-label image-label-right" aria-hidden="true">144 px</span>
+            <div class="compare-control image-compare-control" hidden>
+              <span class="comparison-handle" aria-hidden="true">↔</span>
+              <input aria-label="Compare resolutions" id="resolution" type="range" aria-controls="satellite-comparison" data-comparison-label="higher-resolution view" min="0" max="100" value="52" aria-valuetext="52% higher-resolution view">
+            </div>
           </div>
           <div class="project-copy">
-            <div class="compare-control" hidden>
-              <label for="resolution">Compare resolutions</label>
-              <input id="resolution" type="range" aria-controls="satellite-comparison" data-comparison-label="higher-resolution view" min="0" max="100" value="52" aria-valuetext="52% higher-resolution view">
-            </div>
             <p class="eyebrow">Computer vision · YOLOv8</p>
             <div class="project-title">
               <h3>Satellite Object Detection</h3>
@@ -78,12 +78,12 @@
             <span class="comparison-line" aria-hidden="true"></span>
             <span class="image-label image-label-left" aria-hidden="true">Original</span>
             <span class="image-label image-label-right" aria-hidden="true">Preprocessed</span>
+            <div class="compare-control image-compare-control" hidden>
+              <span class="comparison-handle" aria-hidden="true">↔</span>
+              <input aria-label="Compare preprocessing" id="lesion-split" type="range" min="0" max="100" value="52" aria-controls="lesion-comparison" data-comparison-label="original image" aria-valuetext="52% original image">
+            </div>
           </div>
           <div class="project-copy">
-            <div class="compare-control" hidden>
-              <label for="lesion-split">Compare preprocessing</label>
-              <input id="lesion-split" type="range" min="0" max="100" value="52" aria-controls="lesion-comparison" data-comparison-label="original image" aria-valuetext="52% original image">
-            </div>
             <p class="eyebrow">Transfer learning</p>
             <div class="project-title">
               <h3>Skin Lesion Classification</h3>
@@ -107,14 +107,13 @@
     </section>
     <details class="archive">
       <summary>More projects</summary>
-      <ul>
-        <li><a href="https://l1l197-kendallh78.shinyapps.io/r_shiny/">R Shiny Application</a><br><span class="project-skills">R<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span>Shiny<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span>Feature Engineering<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span>Random Forest Classification</span></li>
-        <li><a href="https://docs.google.com/presentation/d/1i0IDJRD3Fgem1OZl95vP1CrycOi2n9uCUO3fP23TTro/edit?usp=sharing">Uber Business Analysis</a><br><span class="project-skills">Exploratory Data Analysis<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span>Business Analytics</span></li>
-        <li><a href="https://wp.wpi.edu/hawaii/enhancing-outreach-to-promote-water-conservation-practices-on-oahu/">Water Conservation Outreach on Oʻahu</a><br><span class="project-skills">Data Analysis<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span>Stakeholder Outreach<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span>Research Communication</span></li>
-        <li><a href="https://public.tableau.com/views/MQPCompetitorDashboard/CompetitorAnalysisDashboard">Competitor Data Analysis</a><br><span class="project-skills">Tableau<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span>Dashboard Design<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span>Competitor Analysis</span></li>
-        <li><a href="https://public.tableau.com/views/MQPTableau/Dashboard">Company Data Analysis</a><br><span class="project-skills">Tableau<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span>Data Visualization<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span>Dashboard Design</span></li>
-        <li><a href="https://public.tableau.com/shared/2TJ4TBJYQ">Vending Machine Analytics</a><br><span class="project-skills">Tableau<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span>Business Intelligence<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span>Data Visualization</span></li>
-        <li><a href="./images/Heart%20Data%20Visualization.png">Heart Data Visualization</a><br><span class="project-skills">JavaScript<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span>D3.js<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span>Linked Visualizations</span></li>
+      <ul class="archive-grid" role="list">
+        <li><a href="https://l1l197-kendallh78.shinyapps.io/r_shiny/">R Shiny Application</a><span class="project-skills">R<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span><wbr>Shiny<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span><wbr>Feature Engineering<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span><wbr>Random Forest Classification</span></li>
+        <li><a href="https://docs.google.com/presentation/d/1i0IDJRD3Fgem1OZl95vP1CrycOi2n9uCUO3fP23TTro/edit?usp=sharing">Uber Business Analysis</a><span class="project-skills">Exploratory Data Analysis<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span><wbr>Business Analytics</span></li>
+        <li><a href="https://wp.wpi.edu/hawaii/enhancing-outreach-to-promote-water-conservation-practices-on-oahu/">Water Conservation Outreach on Oʻahu</a><span class="project-skills">Data Analysis<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span><wbr>Stakeholder Outreach<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span><wbr>Research Communication</span></li>
+        <li><a href="https://public.tableau.com/views/MQPCompetitorDashboard/CompetitorAnalysisDashboard">Competitor Data Analysis</a><span class="project-skills">Tableau<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span><wbr>Dashboard Design<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span><wbr>Competitor Analysis</span></li>
+        <li><a href="https://public.tableau.com/views/MQPTableau/Dashboard">Company Data Analysis</a><span class="project-skills">Tableau<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span><wbr>Data Visualization<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span><wbr>Dashboard Design</span></li>
+        <li><a href="./images/Heart%20Data%20Visualization.png">Heart Data Visualization</a><span class="project-skills">JavaScript<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span><wbr>D3.js<span class="skill-separator" aria-hidden="true">•</span><span class="skill-pause">, </span><wbr>Linked Visualizations</span></li>
       </ul>
     </details>
   </main>

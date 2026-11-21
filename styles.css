@@ -31,20 +31,22 @@ a:focus-visible, summary:focus-visible, input:focus-visible { outline: 2px solid
 .site-header { padding-block: .6rem; border-bottom: 1px solid var(--line); }
 .site-header nav, .site-footer nav { display: flex; flex-wrap: wrap; gap: .4rem 1.25rem; }
 .site-header a, .site-footer { font-size: .875rem; }
-.home-link { display: grid; place-items: center; width: 2.75rem; height: 2.75rem; color: var(--skill-plum); }
-.home-link:hover { color: var(--berry); }
-.home-link svg { display: block; width: 1.4rem; height: 1.4rem; }
+.site-header nav { gap: .25rem; }
+.home-link, .header-icon-link { display: grid; place-items: center; width: 2.75rem; height: 2.75rem; color: var(--skill-plum); }
+.home-link:hover, .header-icon-link:hover { color: var(--berry); }
+.home-link svg, .header-icon-link svg { display: block; width: 1.4rem; height: 1.4rem; }
+.header-icon-link[aria-label="GitHub"] svg { width: 1.125rem; height: 1.125rem; }
 .hero {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  padding: clamp(2.8rem, 6vw, 5rem) 0;
+  padding-block: clamp(1.4rem, 2.8vw, 2.25rem) clamp(1.15rem, 2vw, 1.65rem);
 }
-.hero h1 { line-height: .95; }
-.hero .intro { max-width: 56ch; }
+.hero h1 { font-size: clamp(2.75rem, 7.5vw, 6.5rem); line-height: .95; }
+.hero .intro { max-width: 56ch; margin-block: 1rem; font-size: clamp(1rem, 1.5vw, 1.1rem); }
 .hero-crease {
   height: 1px;
-  margin-top: clamp(1rem, 3vw, 2rem);
+  margin-top: clamp(.85rem, 2vw, 1.4rem);
   background: var(--skill-plum);
   transform-origin: left center;
 }
@@ -53,7 +55,8 @@ h1 { font-size: clamp(4.4rem, 11vw, 9.5rem); letter-spacing: -.05em; line-height
 h2 { font-size: clamp(2.5rem, 5vw, 4.1rem); letter-spacing: -.025em; }
 h3 { font-size: clamp(1.65rem, 2.7vw, 2.35rem); }
 .eyebrow { color: var(--berry); font-size: .8125rem; font-weight: 600; letter-spacing: .045em; }
-.hero .eyebrow, .case-header .eyebrow { margin-bottom: 1rem; }
+.hero .eyebrow { margin-bottom: .65rem; }
+.case-header .eyebrow { margin-bottom: 1rem; }
 .intro { max-width: 40ch; margin-block: 1.4rem; font-size: clamp(1rem, 2vw, 1.2rem); }
 .button { display: inline-block; background: var(--berry); color: var(--cream); padding: .65rem 1rem; text-decoration: none; font-weight: 600; }
 .button:hover { background: var(--plum); }
@@ -87,19 +90,80 @@ h3 { font-size: clamp(1.65rem, 2.7vw, 2.35rem); }
 .comparison { position: relative; overflow: hidden; --split: 52%; background: var(--plum); }
 .comparison img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center 43%; }
 .comparison-layer { position: absolute; inset: 0; clip-path: inset(0 calc(100% - var(--split)) 0 0); }
-.comparison-line { position: absolute; inset-block: 0; left: var(--split); width: 2px; background: var(--cream); transform: translateX(-50%); }
+.comparison-line { position: absolute; inset-block: 0; left: var(--split); width: 2px; background: #f3b5cb; box-shadow: 0 0 0 1px var(--skill-plum); transform: translateX(-50%); }
 .image-label { position: absolute; bottom: .5rem; font: 600 .75rem/1.4 "Inter", sans-serif; padding: .15rem .4rem; background: var(--plum); color: var(--cream); }
 .image-label-left { left: .5rem; }
 .image-label-right { right: .5rem; }
 .compare-control:not([hidden]) { display: flex; gap: .4rem .65rem; align-items: center; flex-wrap: wrap; }
 .compare-control label { font-size: .875rem; font-weight: 600; }
 .compare-control input { flex: 1 1 5rem; min-width: 0; width: 100%; min-height: 2rem; margin: 0; accent-color: var(--berry); }
+.image-compare-control:not([hidden]) { display: block; position: absolute; inset: 0; }
+.image-compare-control input {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  opacity: 0;
+  cursor: ew-resize;
+}
+.comparison-handle {
+  position: absolute;
+  top: 50%;
+  left: clamp(1.1rem, var(--split), calc(100% - 1.1rem));
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-items: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  border: 1px solid var(--skill-plum);
+  border-radius: 50%;
+  background: var(--cream);
+  color: var(--skill-plum);
+  pointer-events: none;
+}
+.image-compare-control:focus-within .comparison-handle {
+  outline: 2px solid var(--cream);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 6px var(--skill-plum);
+}
 .profile-section { display: grid; grid-template-columns: .7fr 1.3fr; gap: 1rem; border-top: 1px solid var(--line); margin-top: 3rem; padding-block: 1.5rem; }
 .profile-section p + p { margin-top: .65rem; }
 .archive { border-top: 1px solid var(--line); padding-block: 1rem; }
-.archive summary { cursor: pointer; font-size: 1.125rem; font-weight: 600; }
-.archive .project-skills { font-size: 1rem; }
-.archive li + li { margin-top: .75rem; }
+.archive summary {
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+  width: fit-content;
+  list-style: none;
+  cursor: pointer;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+.archive summary::-webkit-details-marker { display: none; }
+.archive summary::before {
+  content: "";
+  box-sizing: border-box;
+  flex: 0 0 .45rem;
+  height: .45rem;
+  border: solid var(--skill-plum);
+  border-width: 0 2px 2px 0;
+  transform: rotate(-45deg);
+}
+.archive[open] summary::before { transform: rotate(45deg); }
+.archive-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .65rem;
+  margin: .85rem 0 .4rem;
+  padding: 0;
+  list-style: none;
+}
+.archive-grid li { padding: .75rem .95rem; background: var(--cream); border: 1px solid var(--line); }
+.archive-grid a { color: var(--plum); font-weight: 600; }
+.archive-grid a:hover { color: var(--berry); }
+.archive-grid .project-skills { display: block; margin-top: .2rem; }
+@media (max-width: 36rem) {
+  .archive-grid { grid-template-columns: 1fr; }
+}
 .site-footer { border-top: 1px solid var(--line); }
 .site-footer .footer-contact { gap: .25rem; }
 .footer-contact a { display: grid; place-items: center; width: 2.75rem; height: 2.75rem; color: var(--skill-plum); }
@@ -161,7 +225,6 @@ h3 { font-size: clamp(1.65rem, 2.7vw, 2.35rem); }
 }
 @media (max-width: 36rem) {
   .wrap { width: calc(100% - 2rem); }
-  .hero h1 { font-size: clamp(3rem, 10.5vw, 4.1rem); }
   .project { display: block; }
   .project-image { aspect-ratio: 1.7; }
   .profile-section { grid-template-columns: 1fr; }
